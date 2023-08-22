@@ -114,3 +114,121 @@
     ```
 
 
+ 
+# More Shell Commands
+
+## Display Memory Information in Human Readable Format
+Display memory information in human-readable format:
+```bash
+free -h
+```
+
+## Display Low and High Memory Utilization
+Display low and high memory utilization:
+```bash
+free -l
+```
+
+## Display Linux Total Memory
+Display Linux total memory:
+```bash
+free -t
+```
+
+## Get the Time of Last System Boot
+Get the time of the last system boot:
+```bash
+who -b
+```
+
+## Get Information on System Login Processes
+Get information on system login processes:
+```bash
+who -l
+```
+
+## Get the List of User Logged In
+Get the list of users logged in:
+```bash
+who -u
+```
+
+## Get Number of Users Logged-In and Their Usernames
+Get number of users logged-in and their usernames:
+```bash
+who -q
+```
+
+## Get All System Information
+Get all the information:
+```bash
+who -a
+```
+
+## Print the Current/Working Directory
+To print the name of the current/working directory, use the `pwd` command:
+```bash
+pwd
+```
+
+## Create a New File Using `vi` Command
+To create a new file, use the `vi` command:
+```bash
+vi test.txt
+```
+
+## Display Contents of a File Using `cat` Command
+To display the contents of a file, use the `cat` (short for concatenation) command:
+```bash
+cat test.txt
+```
+
+## Copy Contents of One File to Another Using `cp` Command
+To copy contents of one file to another, use the `cp` command:
+```bash
+cp test.txt copytest.txt
+```
+
+## Rename a File Using `mv` Command
+A file can be renamed by moving it. The same can be achieved by using the `mv` command:
+```bash
+mv test3.txt newtest3.txt
+```
+
+## Create an Empty File Using `touch` Command
+For creating an empty file, use the `touch` command:
+```bash
+touch file1 file2 file3
+```
+
+## System Power Start Up and Down Commands
+Shutdown the system and turn the power off immediately:
+```bash
+shutdown -h now
+```
+
+Shutdown the system after a specific amount of time (e.g., 10 minutes):
+```bash
+shutdown -h +10
+```
+
+Reboot the system using the shutdown command:
+```bash
+shutdown -r now
+```
+
+## Sleep the System
+Sleep the system:
+```bash
+sudo pm-suspend
+```
+
+## Exercise: Search a File Anywhere in Your System
+To search for a file anywhere in your system, you can use the `find` command. For example:
+```bash
+find / -name filename.txt
+```
+
+Replace `filename.txt` with the name of the file you want to search for.
+
+
