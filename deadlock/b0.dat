@@ -1,0 +1,17 @@
+/*
+b0.dat
+
+The "b" collection of process data files is meant to simulate
+two processes in a simple deadlock scenario.  If you run
+the simulator with two resources with one of each available, 
+each process will allocate one of the resources, and then
+block on the resource that the other has allocated.
+*/
+C 10    // compute for 10 milliseconds
+R 0     // request resource 0
+C 10    // compute for 10 milliseconds
+R 1     // request resource 1
+C 10    // compute for 10 milliseconds
+F 1     // free resource 1
+F 0     // free resource 0
+H       // halt process

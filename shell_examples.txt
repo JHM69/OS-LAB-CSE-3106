@@ -1,0 +1,81 @@
+Sample commands and practising exercises for the upcoming exam
+
+To create a directory use mkdir command:  mkdir directory_name
+To delete a directory use rmdir command: rmdir directory_name
+To change directory from one location to another use cd command: cd directory_name with path location
+To show the list of directories and files in a current directory use ls command: ls 
+To copy contents of one file to another, use the cp command: cp test.txt copytest.txt
+To move/cut files from one location to another use rm command: rm your file_name destination path location
+For creating an empty file, use the touch command:  touch file1 file2 file3, which creates three files in your current directory.    
+To display the contents of the file, use the cat (short for concatenation) command:  cat test.txt
+A file can be renamed by moving it. The same can be achieved by using the mv command: mv test3.txt newtest3.txt
+grep: The grep command is used to search text. It searches the given file for lines containing a match to the given strings or words. It is one of the most useful commands on Linux and Unix-like system. Let us see how to use grep on a Linux or Unix like system.
+
+The syntax is as follows: (see, page-853 from text book)
+
+
+grep [options] pattern [file-list]
+
+head: Displays the beginning of a file.
+
+The syntax is as follows: (see, page-861 from text book)
+
+head [options] [file-list]
+
+join: Joins lines from two files based on a common field
+
+The syntax is as follows: (see, page-863 from text book)
+                          join [options] file1 file2
+sort: Sorts and/or merges files
+
+The syntax is as follows: (see, page-969 from text book)
+
+
+                         sort [options] [file-list]
+tail: Displays the last part (tail) of a file
+
+The syntax is as follows: (see, page-992 from text book)
+
+           tail [options] [file-list]
+uniq: Displays unique lines from a file
+
+The syntax is as follows: (see, page-1023 from text book)
+
+uniq [options] [input-file] [output-file]
+
+diff: The diff (difference) utility compares two files and displays a list of the differences between them.
+
+The syntax is as follows: (see, page-795 from text book)
+
+file: file command is used to determine the type of a file. .file type may be of human-readable(e.g. ‘ASCII text’) or MIME type(e.g. ‘text/plain; charset=us-ascii’)
+
+The syntax is as follows: (see, page-820 from text book)
+
+
+Practice exercises (important, sheel scripting)
+Suppose you are in Document directory. So Open Last Edited File in that directory. 
+Print all the system information in the following order: Kernel name, network node hostname, kernel release date, kernel version, machine hardware name, hardware platform, operating system.
+Display content in reverse order of a file. 
+Display the current date in the form of dd/mm/yy.
+How do your display both date and time in the format of dd-mm-yy/hh.mm.ss?
+ Copy a file from Desktop to a directory under Documents directory. 
+Make a directory in Pictures with the name My Photos.
+Searche through the memo file for lines that contain the string credit and displays the single line that meets this criterion. 
+Let us assume there are two files file1.txt and file2.txt and we want to combine the contents of these two files.  Furthermore, create a new file with the joined contents.
+Removes all the duplicate lines in a text file.
+Let's say you have a file, data.txt, which contains the following ASCII text:
+apples
+oranges
+pears
+kiwis
+bananas
+Sort the contents in the file in reverse alphabetic order (descending order).
+Find the string “the” containing in a text file name “myfile.txt”.
+Order Files Based on Last Modified Time (In Reverse Order).
+Recursively remove all files and directories under the example directory.
+Display the file contents with the line number to each line of the output.
+Create a directory called temp under your home directory.
+View all the network interfaces along with status.
+
+
+

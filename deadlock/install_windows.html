@@ -1,0 +1,457 @@
+<html>
+<head>
+<title>MOSS | Deadlock Simlulator | Installation | 
+
+Windows
+
+
+</title>
+</head>
+<body bgcolor="#ffffff">
+
+<h1>MOSS Deadlock Simulator
+
+<br>Installation on Windows 95/98/Me/NT/2000 Systems</h1>
+
+
+
+<h2>Purpose</h2>
+
+<p>
+This document provides instructions for the installation
+of the MOSS Deadlock Simulator on 
+
+Microsoft Windows 
+
+
+operating systems.  This procedure should be the same or similar on 
+
+Windows 95, 98, Me, NT, and 2000 
+
+
+systems.  
+The MOSS software
+is designed for use with 
+<a href="http://www.cs.vu.nl/~ast/">Andrew S. Tanenbaum</a>, 
+<a href="http://vig.prenhall.com/catalog/academic/product/1,4096,0130313580,00.html">Modern Operating Systems, 2nd Edition</a> 
+(<a href="http://www.prenhall.com/">Prentice Hall</a>, 2001).  
+The Deadlock Simulator and this installation guide were written by 
+<a href="http://www.ontko.com/~rayo/">Ray Ontko</a>
+(<a href="mailto:rayo@ontko.com"><i>rayo@ontko.com</i></a>).
+
+<p>
+This installation guide only provides information about 
+installing the software and testing the configuration for 
+
+
+Windows operating systems.  To install on Unix-like
+operating systems, please read the 
+<a href="install_unix.html">Installation Guide for Unix/Linux/Solaris/HP-UX Systems</a>.
+
+For more detailed information about the simulator, please
+read the <a href="user_guide.html">User Guide</a>.
+</p>
+
+<h2>Requirements</h2>
+
+The following software components are required
+to install and use the MOSS Deadlock 
+Simulator.
+<ul>
+
+<li>Microsoft Windows 95, 98, Me, NT, or 2000
+
+
+<li>Java Development Kit (JDK) 1.0 or greater 
+<li>Text program editor (e.g., notepad)
+</ul>
+
+<h2>Pre-Installation</h2>
+<p>
+Before installation, you should verify:
+</p>
+<ul>
+<li>that you have a working java runtime environment,
+<li>that you have a working java development environment, and 
+<li>that the working directory is in the classpath for the runtime environment.
+</ul>
+<p>
+If you're using a standard command-line java compiler, the following
+instructions will help determine if your environment is configured
+correctly.
+</p>
+<ol>
+<li>Verify that you have java installed and configured in your environment.
+
+<blockquote><pre>
+C:\WINDOWS> java -version
+</pre></blockquote>
+
+
+You should see a message like this with possibly a different version number.
+<blockquote><pre>
+java version "1.1.8"
+</pre></blockquote>
+If you get a message like:
+
+<blockquote><pre>
+Bad command or file name
+</pre></blockquote>
+
+
+Then java may not be installed on your system, or may not be configured
+for your use.
+<p>
+If you think that Java may already be installed on your system 
+but may not be in your "path", you can find it by
+
+choosing Start -> Find -> Files or Folders
+and enter "java.exe" in the "Named:" field and click the Find Now button.
+If found, make note of the directory folder in which it resides (e.g.,
+"C:\jdk1.1.8\bin").
+<p>
+While you're at it, also seach for javac.exe to see if the Java
+compiler is installed and whether it's in the same directory as
+the java.exe file.
+
+
+<p>
+If Java isn't available on your system, you should check with
+your instructor or system administrator.  If you administer your
+own system, then you should be able to find a copy of Java
+for your operating system.
+<p>
+If you find that java is installed but not configured for
+your use, then perhaps you need to add it to your path.  Consult
+your instructor or system administrator if you need help adding this
+to your path.
+</p>
+<p><!-- --></p>
+
+<li>Verify that the java compiler is installed and configured in 
+your environment.
+
+<blockquote><pre>
+C:\WINDOWS> javac
+</pre></blockquote>
+
+
+If you're using a standard java command-line compiler, you should
+see a message similar to this.
+<blockquote><pre>
+use: javac [-g][-O][-debug][-depend][-nowarn][-verbose][-classpath path][-nowrite][-deprecation][-d dir][-J<runtime flag>] file.java...
+</pre></blockquote>
+If you get a message like:
+
+<blockquote><pre>
+Bad command or file name
+</pre></blockquote>
+
+
+then the java compiler may not be installed on your system, or 
+may not be configured for your use.   Consult your instructor
+or system administrator.
+<p><!-- --></p>
+
+<li>Verify that that the current directory is in your classpath.
+
+<blockquote><pre>
+C:\WINDOWS> echo "%CLASSPATH%"
+</pre></blockquote>
+You should see a list of directories separated by semi-colons (";") 
+or possibly just "". If you don't see the directory "." (a single
+period, which stands for the current directory), then you should
+add it to the classpath.
+<blockquote><pre>
+C:\WINDOWS> set CLASSPATH=.;%CLASSPATH%
+</pre></blockquote>
+
+
+<p><!-- --></p>
+
+</ol>
+<p>
+If you have a working java runtime environment, a working java
+compiler, and the current directory is in your path, then you're
+ready to proceed with the installation.
+</p>
+
+
+<h2>Installation</h2>
+
+Installation of the software can be accomplished with
+these simple steps:
+<ol>
+<li>
+
+Create a directory folder in which you wish to install
+the simulator (e.g., "C:\moss\deadlock").  You can do
+this using the Windows explorer, or from the MS-DOS
+prompt.  To create the directory from the MS-DOS
+prompt:
+<blockquote><pre>
+C:\WINDOWS> cd \&nbsp;
+C:\> mkdir moss
+C:\> cd moss
+C:\moss> mkdir deadlock
+C:\moss> cd deadlock
+C:\moss\deadlock>
+</pre></blockquote>
+
+
+<p><!-- --></p>
+
+<li>
+
+Download the self-extracting ZIP archive (deadlock.exe) into
+the directory folder.
+The latest release for this file can always be found at
+<a href="http://www.ontko.com/moss/deadlock/deadlock.exe">http://www.ontko.com/moss/deadlock/deadlock.exe</a>.
+
+
+<p><!-- --></p>
+
+<li>
+
+Double-click on the file you downloaded (deadlock.exe),
+or invoke it using Start -> Run..., or invoke it
+from an MS-DOS command prompt:
+<blockquote><pre>
+C:\moss\deadlock> deadlock.exe
+</pre></blockquote>
+
+
+<p><!-- --></p>
+
+</ol>
+
+<h2>Files</h2>
+<p>
+The directory should now contain the following files:
+</p>
+<table border="1" cellspacing="0">
+<tr>
+<th>Files
+<th>Description
+<tr>
+<td>
+
+deadlock.exe
+<td>Self-extracting ZIP 
+
+
+archive which contains all the other files.
+<tr>
+<td>Command.java
+<br>CommandParser.java
+<br>ControlPanel.java
+<br>DatFilenameFilter.java
+<br>DeadlockManager.java
+<br>Kernel.java
+<br>OptionsDialog.java
+<br>Process.java
+<br>ProcessesDialog.java
+<br>ProcessesPanel.java
+<br>Resource.java
+<br>ResourcesDialog.java
+<br>ResourcesPanel.java
+<br>deadlock.java
+<td valign="top">
+Java source files (*.java)
+<tr>
+<td>Command.class
+<br>CommandParser.class
+<br>ControlPanel.class
+<br>DatFilenameFilter.class
+<br>DeadlockManager.class
+<br>Kernel.class
+<br>OptionsDialog.class
+<br>Process.class
+<br>ProcessesDialog.class
+<br>ProcessesPanel.class
+<br>Resource.class
+<br>ResourcesDialog.class
+<br>ResourcesPanel.class
+<br>deadlock.class
+<td valign="top">
+Compiled Java class files (*.class)
+<tr>
+<td>a0.dat
+<br>a1.dat
+<br>b0.dat
+<br>b1.dat
+<td>Sample input files
+<tr>
+<td>install_unix.html
+<br>install_windows.html
+<br>user_guide.html
+<br>user_guide_1.gif
+<td valign="top">
+Documentation and associated images
+<tr>
+<td>copying.txt</td>
+<td>Gnu General Public License: Terms and Conditions
+for Copying, Distribution, and Modification
+</table>
+
+<h2>Compilation</h2>
+
+<p>
+The distribution includes compiled class files as
+well as the source java files.  You should not need
+to recompile unless you decide to change the code.
+</p>
+<p>
+If you wish to compile the code, 
+the following commands should work if you're using
+a Java compiler that accepts the normal "javac" command
+line.
+</p>
+
+<blockquote><pre>
+C:\moss\deadlock> javac -nowarn *.java
+</pre></blockquote>
+
+
+
+<p>
+The <tt>-nowarn</tt> flag supresses warning messages, of which
+there may be several.  For backward compatability we use only
+those features of Java which have been present from the beginning,
+some of which are deprecated and are usually reported by the 
+compiler with warning messages.
+</p>
+
+<h2>Test</h2>
+
+<p>
+To test the installed program, enter the following command line.
+
+
+<blockquote><pre>
+C:\moss\deadlock> java deadlock a 2 1 >a.log
+</pre></blockquote>
+
+
+
+<p>
+The program will display a window allowing you to run the
+simulator.  
+When the window presents itself, click on the "run"
+button.  
+You should see the 
+program "execute" cycles, about one per second.
+When the simulation completes, click the 
+"exit" button.
+<p>
+
+The program simulated the creation of two processes and read commands
+for each process from the files "a0.dat" and "a1.dat".
+It also simulated creation of a resource with an available 
+quantity of 1.  During the execution of the simulator, a process
+executes, or requests or frees a resource.  If there are no available
+instances of the resource, the process blocks.  The simulation
+runs until all processes halt.
+<p>
+The input file "a0.dat" looks like this:
+</p>
+<blockquote><pre>
+/*
+a0.dat
+
+The "a" collection of process data files is meant to simulate
+two processes competing for a single resource.  If you run
+the simulator with one resource available, one of the processes
+will block until the other is done using the resource.
+*/
+C 10    // compute for 10 milliseconds
+R 0     // request resource 0
+C 10    // compute for 10 milliseconds
+F 0     // free resource 0
+H       // halt process
+
+</pre></blockquote>
+
+<p>
+The input file "a1.dat" looks like this:
+</p>
+<blockquote><pre>
+/*
+a1.dat
+
+The "a" collection of process data files is meant to simulate
+two processes competing for a single resource.  If you run
+the simulator with one resource available, one of the processes
+will block until the other is done using the resource.
+*/
+C 10    // compute for 10 milliseconds
+R 0     // request resource 0
+C 10    // compute for 10 milliseconds
+F 0     // free resource 0
+H       // halt process
+
+</pre></blockquote>
+
+<p>
+If things are working correctly, the "a.log" output file should look 
+something like this:
+</p>
+<blockquote><pre>
+time = 0 available = 1 blocked = 0
+time = 1 available = 1 blocked = 0
+time = 2 available = 1 blocked = 0
+time = 3 available = 1 blocked = 0
+time = 4 available = 1 blocked = 0
+time = 5 available = 1 blocked = 0
+time = 6 available = 1 blocked = 0
+time = 7 available = 1 blocked = 0
+time = 8 available = 1 blocked = 0
+time = 9 available = 1 blocked = 0
+time = 10 available = 0 blocked = 1
+time = 11 available = 0 blocked = 1
+time = 12 available = 0 blocked = 1
+time = 13 available = 0 blocked = 1
+time = 14 available = 0 blocked = 1
+time = 15 available = 0 blocked = 1
+time = 16 available = 0 blocked = 1
+time = 17 available = 0 blocked = 1
+time = 18 available = 0 blocked = 1
+time = 19 available = 0 blocked = 1
+time = 20 available = 0 blocked = 0
+time = 21 available = 0 blocked = 0
+time = 22 available = 0 blocked = 0
+time = 23 available = 0 blocked = 0
+time = 24 available = 0 blocked = 0
+time = 25 available = 0 blocked = 0
+time = 26 available = 0 blocked = 0
+time = 27 available = 0 blocked = 0
+time = 28 available = 0 blocked = 0
+time = 29 available = 0 blocked = 0
+time = 30 available = 1 blocked = 0
+
+</pre></blockquote>
+
+<p>
+Note that both processes computed for 10 milliseconds, then
+one process was blocked while the other utilized the scarce
+resource for 10 milliseconds, then the block process was
+able to use the resource, then the simulation completed.
+</p>
+<p>
+The program and its input and output files are described 
+more fully in the <i>MOSS Deadlock Simulator
+<a href="user_guide.html">User Guide</a></i>.
+</p>
+<p>
+&copy; Copyright 2001, Prentice-Hall, Inc.
+This program is free software; it is distributed under the
+terms of the Gnu General Public License.  
+See <a href="copying.txt">copying.txt</a>, 
+included with this distribution.
+<p>
+Please send suggestions, corrections, and comments to
+Ray Ontko (<A href="mailto:rayo@ontko.com"><i>rayo@ontko.com</i></a>).
+<p>
+<i>Last updated: July 29, 2001</i>
+</body>
+</html>
