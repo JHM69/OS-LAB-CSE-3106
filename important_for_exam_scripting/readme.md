@@ -38,7 +38,7 @@ fi
 ```bash
 #!/bin/bash
 echo "Current date and time:"
-date 
+date
 ```
 
 **Problem 5: Write a shell script that counts the number of lines in a given file.**
@@ -51,7 +51,7 @@ line_count=$(wc -l < "$filename")
 echo "The file $filename has $line_count lines"
 ```
 
-# **Exercises for EASY:**
+## **Exercises for EASY:**
 
 1. Write a shell script that takes a file name as input and checks whether the file exists or not. If it exists, display a message saying "File exists", otherwise display "File does not exist."
 
@@ -88,7 +88,7 @@ done
 echo "The factorial of $num is: $factorial"
 ```
 
-4. Write a shell script that renames all files in a directory by adding a prefix "new_" to their names.
+4. Write a shell script that renames all files in a directory by adding a prefix "new\_" to their names.
 
 ```bash
 #!/bin/bash
@@ -170,7 +170,7 @@ largest_file=$(find "$dirname" -type f -exec du -ch {} + | grep -e "^[0-9.]*[MG]
 echo "The largest file in $dirname is: $largest_file"
 ```
 
-**Exercises for Shell Scripting:**
+## **Exercises MEDIUM:**
 
 1. Write a shell script that prompts the user to enter a directory name and recursively lists all files and subdirectories in that directory.
 
@@ -255,7 +255,6 @@ esac
 
 # ADVANCED
 
-
 **Problem 1: Write a shell script that recursively finds and counts the number of files in a directory, including all its subdirectories, and displays the count for each subdirectory.**
 
 ```bash
@@ -320,7 +319,7 @@ read logfile
 tail -f "$logfile"
 ```
 
-## **Exercises for Shell Scripting:**
+## **Exercises ADVANCED**
 
 1. Write a shell script that takes a directory name as input and creates a compressed archive (e.g., tar.gz) of all the files in the directory, excluding subdirectories.
 
